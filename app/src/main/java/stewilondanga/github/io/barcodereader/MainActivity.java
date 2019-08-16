@@ -26,4 +26,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         scanBtn.setOnClickListener(this);
     }
+
+    public void onClick(View view){
+        if(view.getId()==R.id.scan_button){
+            IntentIntegrator scanIntegrator = new IntentIntegrator(this);
+            scanIntegrator.initiateScan();
+        }
+    }
 }
