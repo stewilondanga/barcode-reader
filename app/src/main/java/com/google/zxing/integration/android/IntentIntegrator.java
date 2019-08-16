@@ -155,6 +155,15 @@ public class IntentIntegrator {
             intentScan.putExtra("SCAN_FORMATS", joinedByComma.toString());
         }
 
-
+        String targetAppPackage = findTargetAppPackage(intentScan);
+        if (targetAppPackage == null) {
+            return showDownloadDialog();
+        }
+        intentScan.setPackage(targetAppPackage);
+        intentScan.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intentScan.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK_RESET);
+        attachMoreExtras(intentScan);
+        startActivityForResult(intentScan, REQUEST_CODE);
+        return null;
     }
 }
