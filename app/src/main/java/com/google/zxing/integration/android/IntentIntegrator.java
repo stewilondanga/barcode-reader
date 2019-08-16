@@ -86,4 +86,8 @@ public class IntentIntegrator {
     public void setMessageByID(int messageID){
         message = activity.getString(messageID);
     }
+
+    public String getButtonYes(){
+        return buttonYes;
+    }
 }
