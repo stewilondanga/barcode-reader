@@ -23,5 +23,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         scanBtn = (Button)findViewById(R.id.scan_button);
         formatTxt = (TextView)findViewById(R.id.scan_format);
         contentTxt = (TextView)findViewById(R.id.scan_content);
+
+        scanBtn.setOnClickListener(this);
     }
 }
