@@ -70,4 +70,10 @@ public class IntentIntegrator {
     public void setTitle(String title){
         this.title = title;
     }
+
+    public void setTitleBYID(int titleID){
+        title = activity.getString(titleID);
+    }
+
+
 }
