@@ -166,4 +166,8 @@ public class IntentIntegrator {
         startActivityForResult(intentScan, REQUEST_CODE);
         return null;
     }
+
+    protected void startActivityForResult(Intent intent, int code) {
+        activity.startActivityForResult(intent, code);
+    }
 }
