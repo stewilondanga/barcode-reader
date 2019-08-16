@@ -94,4 +94,10 @@ public class IntentIntegrator {
     public void setButtonYes(String buttonYes){
         this.buttonYes = buttonYes;
     }
+
+    public void setButtonYesByID(int buttonYesID){
+        buttonYes = activity.getString(buttonYesID);
+    }
+
+
 }
