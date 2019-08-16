@@ -135,8 +135,11 @@ public class IntentIntegrator {
     }
 
     public final AlertDialog initiateScan(){
-        return initateScan(ALL_CODE_TYPES);
+        return initiateScan(ALL_CODE_TYPES);
     }
 
-
+    public final AlertDialog initiateScan(Collection<String> desiredBarcodeFormats){
+        Intent intentScan = new Intent(BS_PACKAGE + ".SCAN");
+        intentScan.addCategory(Intent.CATEGORY_DEFAULT);
+    }
 }
