@@ -63,5 +63,7 @@ public class IntentIntegrator {
         moreExtras = new HashMap<String, Object>(3);
     }
 
-
+    public String getTitle(){
+        return title;
+    }
 }
