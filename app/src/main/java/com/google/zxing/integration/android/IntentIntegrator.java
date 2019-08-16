@@ -122,7 +122,11 @@ public class IntentIntegrator {
         this.targetApplications = targetApplications;
     }
 
-    public void setSIngleTargetApplication(String targetApplication){
+    public void setSingleTargetApplication(String targetApplication){
         this.targetApplications = Collections.singletonList(targetApplication);
+    }
+
+    public Map<String, ?> getMoreExtras(){
+        return moreExtras;
     }
 }
