@@ -33,4 +33,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             scanIntegrator.initiateScan();
         }
     }
+
+    public void onActivityResult(int requestCode, intresultCode, Intent intent){
+        IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+        if (scanningResult != null){
+            String scanContent = scanningResult.getContents();
+            String scanFormat = scanningResult.getFormatName();
+            formatTxt.setText("FORMAT: " + scanFormat);
+            contentTxt.setText("CONTENT: " + scanContent);
+        }
+    }
 }
