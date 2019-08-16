@@ -134,5 +134,9 @@ public class IntentIntegrator {
         moreExtras.put(key, value);
     }
 
+    public final AlertDialog initiateScan(){
+        return initateScan(ALL_CODE_TYPES);
+    }
+
 
 }
