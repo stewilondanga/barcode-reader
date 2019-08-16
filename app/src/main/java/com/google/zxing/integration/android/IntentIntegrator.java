@@ -82,4 +82,8 @@ public class IntentIntegrator {
     public void setMessage(String message){
         this.message = message;
     }
+
+    public void setMessageByID(int messageID){
+        message = activity.getString(messageID);
+    }
 }
