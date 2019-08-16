@@ -103,5 +103,7 @@ public class IntentIntegrator {
         return buttonNo;
     }
 
-
+    public void setButtonNo(String buttonNo){
+        this.buttonNo = buttonNo;
+    }
 }
