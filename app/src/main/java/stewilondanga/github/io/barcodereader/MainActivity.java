@@ -19,5 +19,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        scanBtn = (Button)findViewById(R.id.scan_button);
+        formatTxt = (TextView)findViewById(R.id.scan_format);
+        contentTxt = (TextView)findViewById(R.id.scan_content);
     }
 }
