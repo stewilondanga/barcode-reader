@@ -170,4 +170,20 @@ public class IntentIntegrator {
     protected void startActivityForResult(Intent intent, int code) {
         activity.startActivityForResult(intent, code);
     }
+
+    private String findTargetAppPackage(Intent intent) {
+        PackageManager pm = activity.getPackageManager();
+        List<ResolveInfo> availableApps = pm.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+        if (availableApps != null){
+            for (ResolveInfo availableApp : availableApps) {
+                String packageName = availableApp.activityInfo.packageName;
+                if (targetApplications.contains(packageName)){
+                    return packageName;
+                }
+            }
+        }
+        return null;
+    }
+
+    private
 }
