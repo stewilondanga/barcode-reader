@@ -141,5 +141,20 @@ public class IntentIntegrator {
     public final AlertDialog initiateScan(Collection<String> desiredBarcodeFormats){
         Intent intentScan = new Intent(BS_PACKAGE + ".SCAN");
         intentScan.addCategory(Intent.CATEGORY_DEFAULT);
+
+        // check which types of codes to scan for
+        if (desiredBarcodeFormats != null) {
+            //set the desired barcode types
+            StringBuilder joinedByComma = new StringBuilder();
+            for (String format : desiredBarcodeFormats) {
+                if  (joinedByComma.length() > 0) {
+                    joinedByComma.append(',');
+                }
+                joinedByComma.append(format);
+            }
+            intentScan.putExtra("SCAN_FORMATS", joinedByComma.toString());
+        }
+
+
     }
 }
