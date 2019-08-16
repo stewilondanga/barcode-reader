@@ -129,4 +129,10 @@ public class IntentIntegrator {
     public Map<String, ?> getMoreExtras(){
         return moreExtras;
     }
+
+    public final void addExtra(String key, Object value) {
+        moreExtras.put(key, value);
+    }
+
+
 }
