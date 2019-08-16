@@ -90,4 +90,8 @@ public class IntentIntegrator {
     public String getButtonYes(){
         return buttonYes;
     }
+
+    public void setButtonYes(String buttonYes){
+        this.buttonYes = buttonYes;
+    }
 }
