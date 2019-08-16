@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private TextView formatTxt, contentTxt;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -27,16 +27,16 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         scanBtn.setOnClickListener(this);
     }
 
-    public void onClick(View view){
-        if(view.getId()==R.id.scan_button){
+    public void onClick(View v){
+        if(v.getId()==R.id.scan_button){
             IntentIntegrator scanIntegrator = new IntentIntegrator(this);
             scanIntegrator.initiateScan();
         }
     }
 
-    public void onActivityResult(int requestCode, intresultCode, Intent intent){
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
-        if (scanningResult != null){
+        if (scanningResult != null) {
             String scanContent = scanningResult.getContents();
             String scanFormat = scanningResult.getFormatName();
             formatTxt.setText("FORMAT: " + scanFormat);
