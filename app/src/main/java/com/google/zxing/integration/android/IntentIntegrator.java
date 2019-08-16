@@ -75,5 +75,7 @@ public class IntentIntegrator {
         title = activity.getString(titleID);
     }
 
-
+    public String getMessage(){
+        return message;
+    }
 }
