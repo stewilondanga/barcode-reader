@@ -99,5 +99,9 @@ public class IntentIntegrator {
         buttonYes = activity.getString(buttonYesID);
     }
 
+    public String getButtonNo(){
+        return buttonNo;
+    }
+
 
 }
