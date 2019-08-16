@@ -121,4 +121,8 @@ public class IntentIntegrator {
         }
         this.targetApplications = targetApplications;
     }
+
+    public void setSIngleTargetApplication(String targetApplication){
+        this.targetApplications = Collections.singletonList(targetApplication);
+    }
 }
