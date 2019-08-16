@@ -106,4 +106,8 @@ public class IntentIntegrator {
     public void setButtonNo(String buttonNo){
         this.buttonNo = buttonNo;
     }
+
+    public void setButtonNoByID(int buttonNoID){
+        buttonNo = activity.getString(buttonNoID);
+    }
 }
