@@ -110,4 +110,7 @@ public class IntentIntegrator {
     public void setButtonNoByID(int buttonNoID){
         buttonNo = activity.getString(buttonNoID);
     }
+
+    public Collection<String> getTargetApplications()
+        return targetApplications;
 }
