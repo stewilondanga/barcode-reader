@@ -111,6 +111,14 @@ public class IntentIntegrator {
         buttonNo = activity.getString(buttonNoID);
     }
 
-    public Collection<String> getTargetApplications()
+    public Collection<String> getTargetApplications() {
         return targetApplications;
+    }
+
+    public final void setTargetApplications(List<String> targetApplications){
+        if (targetApplications.isEmpty()){
+            throw new IllegalArgumentException("No target applications");
+        }
+        this.targetApplications = targetApplications;
+    }
 }
