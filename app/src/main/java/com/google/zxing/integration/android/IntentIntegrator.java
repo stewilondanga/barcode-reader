@@ -36,5 +36,6 @@ public class IntentIntegrator {
     public static final Collection<String> QR_CODE_TYPES = Collections.singleton("QR_CODE");
     public static final Collection<String> DATA_MATRIX_TYPES = Collections.singleton("DATA_MATRIX");
 
+    public static final Collection<String> ALL_CODE_TYPES = null;
 
 }
