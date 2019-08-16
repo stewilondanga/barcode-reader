@@ -54,5 +54,14 @@ public class IntentIntegrator {
     private List<String> targetApplications;
     private final Map<String, Object> moreExtras;
 
+    public IntentIntegrator(Activity activity) {
+        this.activity = activity;
+        title = DEFAULT_TITLE;
+        message = DEFAULT_YES;
+        buttonNo = DEFAULT_NO;
+        targetApplications = TARGET_ALL_KNOWN;
+        moreExtras = new HashMap<String, Object>(3);
+    }
+
 
 }
