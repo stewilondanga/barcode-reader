@@ -45,4 +45,14 @@ public class IntentIntegrator {
             BSPLUS_PACKAGE + ".simple" // Barcode Scanner+ Simple
             // What else supports this intent?
     );
+
+    private final Activity activity;
+    private String title;
+    private String message;
+    private String buttonYes;
+    private String buttonNo;
+    private List<String> targetApplications;
+    private final Map<String, Object> moreExtras;
+
+
 }
